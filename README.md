@@ -37,7 +37,7 @@ requirements.txt
 + gunicorn==19.7.1
 ```
 ## Deployment on local machine
-+ Create an isolated Python environment in a directory external to the project and activate it:
+Create an isolated Python environment in a directory external to the project and activate it:
 ```bash
 $ python3 install --upgrade virtualenv
 $ cd your-project
@@ -45,15 +45,15 @@ $ virtualenv --python python3 env
 # activate the virtual environment
 $ source env/bin/activate 
 ```
-+ Install dependencies:
+Install dependencies:
 ```bash
 $ pip3 install -r requirements.txt
 ```
-+ Run the application:
+Run the application:
 ```bash
 $ python3 main.py
 ```
-+ In your web browser, enter the following address:
+In your web browser, enter the following address:
 ```
 http://localhost:8080
 ```
@@ -61,8 +61,10 @@ Learn more about Google App Engine
 + [Quickstart in Google App Engine](https://cloud.google.com/appengine/docs/standard/python3/quickstart)
 
 ## Deployment on Google Cloud Platform
-+ Create a Google Cloud Projet
- <a href="https://cloud.google.com/resource-manager/docs/creating-managing-projects" target="_blank">Tutorial</a>
+Create a Google Cloud Projet
++  <a href="https://cloud.google.com/resource-manager/docs/creating-managing-projects" target="_blank">Tutorial</a>
+
+Google Cloud SDK workflow
 ```bash
 # install init Google Cloud SDK, login your google account, choose project, etc...
 $ gcloud init
