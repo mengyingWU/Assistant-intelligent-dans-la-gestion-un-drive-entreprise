@@ -1,4 +1,18 @@
 # Assistant intelligent dans la gestion d’un drive d’entreprise
+This is a a guide of project "Assistant intelligent dans la gestion d’un drive d’entreprise" of IMT Atlantique F3B 2018-2019.
+## Functions implemented
++ Search documents in Google Drive by a weighted average of tag, title and content.
++ Web application based on Flask.
++ Vocal input
++ Update/Modify document tags through web application, synchronizing with google cloud sql.
++ Update backend TF-IDF matrix when there is a change in Google Drive (App engine cron job)
+
+## Function not implemented
++ Auto tagging not ready because of a small corpus, classifier is weak.
+ 
+## Risk
++ Web application on Google Cloud is not stable, break down sometimes.
+
 ## Installation
 + Python 3
 + [Google Cloud SDK 226.0.0](https://cloud.google.com/sdk/install)
@@ -6,35 +20,35 @@
 ./
 ```
 ├─ main.py                # Web application router
-├─ process.py           # Request handler
+├─ process.py             # Request handler
 ├─ nltk_data              # nltk package 
-├─ profiles_fr_en       # language profiles
-├─ settings                # google cloud storage credential
-├─ static                    # css, js, pictures
-├─ templates             # html files
-├─ requirements.txt   # web application dependencies 
+├─ profiles_fr_en         # language profiles
+├─ settings               # google cloud storage credential
+├─ static                 # css, js, pictures
+├─ templates              # html files
+├─ requirements.txt       # web application dependencies 
 ├─ app.yaml               # GAE app config
 └─ cron.yaml              # GAE Cron jobs config
 ```
 requirements.txt
-```
+```bash
 + Flask==1.0.2
-+ nltk==3.4
-+ pandas==0.23.4
-+ gensim==3.7.0
-+ scikit-learn==0.20.3
-+ PyDrive==1.3.1
-+ stop-words==2018.7.23
++ nltk==3.4                     # processing libraries for tokenization, stemming
++ gensim==3.7.0                 # processing libraries for tokenization, stemming
++ pandas==0.23.4                # For data structures and data analysis
++ scikit-learn==0.20.3          # For data mining and data analysis, i.e., tfidf and Lda model
++ PyDrive==1.3.1                # A library of google-api-python-client that simplifies many common Google Drive API tasks.
++ stop-words==2018.7.23         # Stop words set
 + PyYAML==3.13
-+ pdfminer3k==1.3.1
++ pdfminer3k==1.3.1             # For read different type of dcouments: pdf, ppt, docx
 + python-pptx==0.6.17
 + python-docx==0.8.10
-+ langdetect==1.0.7
++ langdetect==1.0.7             # Detect the language of content
 + google-cloud-storage==1.14.0
 + xlrd==1.2.0
-+ SQLAlchemy==1.2.18
++ SQLAlchemy==1.2.18            # Python SQL toolkit
 + PyMySQL==0.9.3
-+ gunicorn==19.7.1
++ gunicorn==19.7.1              # A Python WSGI HTTP Server for UNIX, here for setting the enterpoint
 ```
 ## Deployment on local machine
 Create an isolated Python environment in a directory external to the project and activate it:
