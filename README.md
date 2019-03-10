@@ -38,8 +38,49 @@ requirements.txt
 + PyMySQL==0.9.3
 + gunicorn==19.7.1
 ```
-## Deployment
+## Deployment on local machine
++ Create an isolated Python environment in a directory external to the project and activate it:
+```bash
+$ python3 install --upgrade virtualenv
+$ cd your-project
+$ virtualenv --python python3 env
+# activate the this virtual environment
+$ source env/bin/activate 
+```
++ Install dependencies:
+```bash
+$ pip3 install -r requirements.txt
+```
++ Run the application:
+```bash
+$ python3 main.py
+```
++ In your web browser, enter the following address:
+```
+http://localhost:8080
+```
+Learn more about Google App Engine
 + [Quickstart in Google App Engine](https://cloud.google.com/appengine/docs/standard/python3/quickstart)
+
+## Deployment on Google Cloud Platform
++ Create a Google Cloud Projet
+ <a href="https://cloud.google.com/resource-manager/docs/creating-managing-projects" target="_blank">Tutorial</a>
++create a google cloud projet
+```bash
+# install init Google Cloud SDK, login your google account, choose project, etc...
+$ gcloud init
+
+# Go to application root directory:
+$ cd /application-root-directory
+
+#deploy web application on Google Cloud
+$ gcloud app deploy app.yaml
+
+#deploy cron jobs
+$ gcloud app deploy cron.yaml
+```
+
+
 ## References
 + <a href="https://developers.google.com/appengine/downloads" target="_blank">Google App Engine SDK</a>
 + <a href="https://pypi.org/project/python-docx" target="_blank">python-docx</a>
@@ -48,5 +89,4 @@ requirements.txt
 + <a href="https://pypi.org/project/pdfminer3k" target="_blank">pdfminer3k</a>
 + <a href="https://pypi.org/project/python-pptx" target="_blank">python-pptx</a>
 + <a href="https://pypi.org/project/langdetect" target="_blank">langdetect</a>
-
 
