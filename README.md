@@ -1,5 +1,4 @@
-# Assistant-intelligent-dans-la-gestion-d-un-drive-d-entreprise
-
+# Assistant intelligent dans la gestion d’un drive d’entreprise
 ## Installation
 + Python 3
 + [Google Cloud SDK 226.0.0](https://cloud.google.com/sdk/install)
