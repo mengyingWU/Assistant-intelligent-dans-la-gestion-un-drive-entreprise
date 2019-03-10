@@ -78,7 +78,8 @@ $ gcloud app deploy app.yaml
 #deploy cron jobs
 $ gcloud app deploy cron.yaml
 ```
-
+## Block Diagram
+![image](https://github.com/mengyingWU/Assistant-intelligent-dans-la-gestion-d-un-drive-d-entreprise/blob/master/image.png)
 
 ## References
 + <a href="https://developers.google.com/appengine/downloads" target="_blank">Google App Engine SDK</a>
