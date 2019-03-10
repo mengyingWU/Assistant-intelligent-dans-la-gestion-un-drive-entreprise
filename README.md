@@ -1,5 +1,4 @@
 # Assistant-intelligent-dans-la-gestion-d-un-drive-d-entreprise
-## Tutorial on how to run a Flask-based application on Google App Engine
 
 ## Installation
 + Python 3
