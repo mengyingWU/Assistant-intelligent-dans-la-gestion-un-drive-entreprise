@@ -42,7 +42,7 @@ requirements.txt
 $ python3 install --upgrade virtualenv
 $ cd your-project
 $ virtualenv --python python3 env
-# activate the this virtual environment
+# activate the virtual environment
 $ source env/bin/activate 
 ```
 + Install dependencies:
@@ -63,7 +63,6 @@ Learn more about Google App Engine
 ## Deployment on Google Cloud Platform
 + Create a Google Cloud Projet
  <a href="https://cloud.google.com/resource-manager/docs/creating-managing-projects" target="_blank">Tutorial</a>
-+create a google cloud projet
 ```bash
 # install init Google Cloud SDK, login your google account, choose project, etc...
 $ gcloud init
@@ -87,4 +86,3 @@ $ gcloud app deploy cron.yaml
 + <a href="https://pypi.org/project/pdfminer3k" target="_blank">pdfminer3k</a>
 + <a href="https://pypi.org/project/python-pptx" target="_blank">python-pptx</a>
 + <a href="https://pypi.org/project/langdetect" target="_blank">langdetect</a>
-
